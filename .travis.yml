@@ -1,5 +1,15 @@
 language: java
 sudo: false
+install:
+  - git clone https://github.com/OpenRefine/OpenRefine.git
+  - cd OpenRefine
+  - git checkout 3.2
+  - ./refine build
+  - cd ..
+before_script:
+  - mkdir -p OpenRefine/extensions/testing
+  - mv module src module.xml pom.xml OpenRefine/extensions/testing
+  - cd OpenRefine/extensions/testing
 script:
   - mvn clean compile
   - mvn package assembly:single
