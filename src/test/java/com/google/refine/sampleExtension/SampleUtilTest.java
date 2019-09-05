@@ -1,11 +1,17 @@
 package com.google.refine.sampleExtension;
 
 import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
 public class SampleUtilTest {
 
     @Test
     public void testDummyMethod() {
-        assert SampleUtil.dummyMethod() == 42;
+        assertEquals(42, SampleUtil.dummyMethod());
+    }
+
+    @Test
+    public void testFailing() {
+        assertEquals(10, 7);
     }
 }

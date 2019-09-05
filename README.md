@@ -18,6 +18,11 @@ You are required to have Maven installed with other necessary tools for building
 
 ```console
 $ mvn clean compile
+```
+
+To create a ZIP file, run:
+
+```console
 $ mvn package assembly:single
 ```
 
