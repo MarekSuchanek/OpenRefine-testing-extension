@@ -1,9 +1,7 @@
 language: java
 sudo: false
 script:
-  - mvn clean compile
-  - mvn test -B
-  - mvn package assembly:single
+  - mvn clean package assembly:single
 deploy:
   provider: releases
   api_key: $GITHUB_TOKEN
