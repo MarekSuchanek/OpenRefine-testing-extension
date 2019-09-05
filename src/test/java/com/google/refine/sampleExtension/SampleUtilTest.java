@@ -9,9 +9,4 @@ public class SampleUtilTest {
     public void testDummyMethod() {
         assertEquals(42, SampleUtil.dummyMethod());
     }
-
-    @Test
-    public void testFailing() {
-        assertEquals(10, 7);
-    }
 }
