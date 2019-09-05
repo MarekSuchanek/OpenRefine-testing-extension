@@ -31,4 +31,4 @@ module/MOD-INF/lib/
 .idea
 *.iml
 
-!lib-local/*.jar
+!project-repository/*

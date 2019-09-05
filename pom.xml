@@ -13,6 +13,13 @@
     <packaging>jar</packaging>
     <version>0.1.0</version>
 
+    <repositories>
+        <repository>
+            <id>maven-repository</id>
+            <url>file:///${project.basedir}/project-repository</url>
+        </repository>
+    </repositories>
+
     <build>
         <finalName>testing</finalName>
         <resources>
@@ -87,45 +94,6 @@
                         </fileset>
                     </filesets>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-install-plugin</artifactId>
-                <version>2.5.2</version>
-                <executions>
-                    <execution>
-                        <id>install-butterfly</id>
-                        <phase>process-resources</phase>
-                        <configuration>
-                            <file>${basedir}/lib-local/butterfly-1.0.2.jar</file>
-                            <repositoryLayout>default</repositoryLayout>
-                            <groupId>edu.mit.simile</groupId>
-                            <artifactId>butterfly</artifactId>
-                            <version>1.0.2</version>
-                            <packaging>jar</packaging>
-                            <generatePom>true</generatePom>
-                        </configuration>
-                        <goals>
-                            <goal>install-file</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>install-openrefine-main</id>
-                        <phase>process-resources</phase>
-                        <configuration>
-                            <file>${basedir}/lib-local/openrefine-main-3.2.jar</file>
-                            <repositoryLayout>default</repositoryLayout>
-                            <groupId>org.openrefine</groupId>
-                            <artifactId>main</artifactId>
-                            <version>3.2</version>
-                            <packaging>jar</packaging>
-                            <generatePom>true</generatePom>
-                        </configuration>
-                        <goals>
-                            <goal>install-file</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
