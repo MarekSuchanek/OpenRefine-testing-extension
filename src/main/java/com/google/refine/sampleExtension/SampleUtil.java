@@ -19,4 +19,8 @@ public class SampleUtil {
     static public void testApacheJena() {
         OntModel model = ModelFactory.createOntologyModel();
     }
+
+    static public int dummyMethod() {
+        return 42;
+    }
 }
