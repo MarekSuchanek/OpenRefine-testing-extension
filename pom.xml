@@ -99,6 +99,7 @@
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>3.0.0</version>
                 <configuration>
+                    <finalName>${project.artifactId}-${project.version}</finalName>
                     <descriptors>
                         <descriptor>src/assembly/module.xml</descriptor>
                     </descriptors>
