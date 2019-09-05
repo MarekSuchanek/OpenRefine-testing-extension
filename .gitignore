@@ -30,3 +30,5 @@ module/MOD-INF/lib/
 # IntelliJ IDEA
 .idea
 *.iml
+
+!lib-local/*.jar
