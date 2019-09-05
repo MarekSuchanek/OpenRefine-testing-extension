@@ -9,18 +9,15 @@
     </formats>
     <fileSets>
         <fileSet>
-            <directory>src</directory>
+            <directory>src/main/java</directory>
             <outputDirectory>module/MOD-INF/classes</outputDirectory>
             <excludes>
                 <exclude>**/*.java</exclude>
             </excludes>
         </fileSet>
         <fileSet>
-            <directory>module</directory>
+            <directory>src/main/resources/module</directory>
             <outputDirectory>module</outputDirectory>
-            <excludes>
-                <exclude>**/module/MOD-INF/lib/*</exclude>
-            </excludes>
         </fileSet>
         <fileSet>
             <directory>./</directory>
